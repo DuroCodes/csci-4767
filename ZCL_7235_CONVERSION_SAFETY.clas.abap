@@ -2,7 +2,7 @@
 * Global Class tab: paste from ZCL_7235_CONVERSION_SAFETY_global.abap
 * Local Types tab:  paste from ZCL_7235_CONVERSION_SAFETY_local.abap
 *
-* Demonstrates conversion behavior and safety techniques from learning.txt:
+* Demonstrates conversion behavior and safety techniques from learning
 * successful assignments, conversion exceptions, truncation/rounding, EXACT,
 * and inline declaration type pitfalls.
 *
