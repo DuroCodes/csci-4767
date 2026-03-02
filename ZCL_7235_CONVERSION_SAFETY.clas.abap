@@ -97,6 +97,7 @@ CLASS lcl_conversion_demo IMPLEMENTATION.
     DATA var_string TYPE string.
     DATA var_int    TYPE i.
     DATA var_pack   TYPE p LENGTH 3 DECIMALS 2.
+    DATA source_pack TYPE p LENGTH 4 DECIMALS 2.
 
     var_string = `ABCDE`.
     TRY.
@@ -106,10 +107,12 @@ CLASS lcl_conversion_demo IMPLEMENTATION.
           TO r_result.
     ENDTRY.
 
+    source_pack = '1000.00'.
+
     TRY.
-        var_pack = 1000.
+        var_pack = source_pack.
       CATCH cx_sy_conversion_overflow INTO DATA(overflow).
-        APPEND |Overflow assigning 1000 to P(3,2) ({ overflow->get_text( ) })|
+        APPEND |Overflow assigning { source_pack } to P(3,2) ({ overflow->get_text( ) })|
           TO r_result.
     ENDTRY.
   ENDMETHOD.
